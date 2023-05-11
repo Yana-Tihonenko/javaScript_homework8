@@ -1,26 +1,49 @@
 //Задание 1
-//Создайте массив из следующих элементов: "Семен", "Иван", "Петр", "Татьяна". 
-//Создайте еще один массив с возрастами: 18, 27, 74, 34; 
-//Создайте и заполните при помощи цикла этот новый массив новыми элементами по образу: "Семен 18 лет/годов"
+//Создайте стрелочную функцию, которая бы принимала массив и цифру, возвращала бы элемент массива под этим индексом.
 
-let arrayName = new Array("Семен", "Иван", "Петр", "Татьяна");
-let arrayYears = new Array(18, 27, 74, 34);
-let joinArrat = new Array();
+const searchNumberFromArray = (a, b) => {
+    const index = a.indexOf(b);
+    if (index != -1) {
+        return a[index];
+    } else {
+        return null;
+    }
+};
 
-//1-й вариант
-for (let i = 0; i < arrayName.length; i++) {
-    joinArrat.push(arrayName[i] + ' ' + arrayYears[i] + ' ' + 'лет/годов');
+
+// Задание 2
+// Создайте функцию, которая бы принимала бы следующие параметры:
+
+// код погоды
+// функция decode, которая дает расшифровку погоды по коду.
+// Функция должна возвращать строку, описывающую погоду.
+
+function decode(kod) {
+    switch (kod) {
+        case "SQ":
+            return "шквал"
+        case "PO":
+            return "пыльный вихрь"
+        case "FC":
+            return "торнадо"
+        case "BR":
+            return "дымка(видимость от 1 до 9 км)"
+        case "HZ":
+            return "мгла(видимость менее 10 км)"
+        case "FU":
+            return "дым(видимость менее 10 км)"
+        case "DS":
+            return "пыльная буря(видимость менее 10 км)"
+        case "SS":
+            return "песчаная буря(видимость менее 10 км)"
+        default:
+            return "неопределено"
+
+    }
 }
 
-//2-й вариант 
-for (let i = 0; i < arrayName.length; i++) {
-    joinArrat.push(`${arrayName[i]} ${arrayYears[i]} лет/годов`)
-    
+let kod = "SS";
+const wether = (kod) => {
+    return kod +": "+decode(kod) ;
 }
-
-//Задание 2
-//Используя пройденные на занятии методы массива получите из этого массива новый массив, 
-//в котором элементы идут в обратной последовательности.
-
-let newJoinArray = new Array (joinArrat.reverse());
-
+console.log(wether(kod));
