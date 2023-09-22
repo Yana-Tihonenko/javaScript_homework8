@@ -1,8 +1,10 @@
-// Задание 1
-// Создайте классы:Plant, Rose. Роза должна наследовать Растение. 
-// Пусть у растения будут поля: рост, возраст. 
-// И метод grow, который увеличивает его рост на 10 см. 
-// У розы должно быть поле - количество бутонов (numberOfFlowers). Создайте объект класса розы, вызовите метод.
+// Task 1
+// Create classes: Plant, Rose. The Rose class should inherit from Plant.
+// Let the plant have fields: height, age.
+// Create a method named grow that increases its height by 10 cm.
+// The Rose class should have a field called numberOfFlowers.
+// Create an object of the Rose class and call the grow method.
+
 
 class Plant {
     constructor (height, age){
