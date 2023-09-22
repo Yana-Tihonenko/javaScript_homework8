@@ -1,5 +1,3 @@
-# JavaScript Tasks
-
 ## Task 1
 Rewrite the task from the previous lesson using `get` and `set` methods.
 
